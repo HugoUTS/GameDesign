@@ -2,8 +2,8 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-    public float speed = 5.0f;
-    public float jumpForce = 10.0f;
+    public float speed = 3.0f;
+    public float jumpForce = 2.0f;
     private Rigidbody2D rb;
     private Animator animator;
     private bool isGrounded;

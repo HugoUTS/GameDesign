@@ -1736,6 +1736,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5173340546927507420, guid: e155d907d45bbec4bb9765c788befc68, type: 3}
+      propertyPath: jumpForce
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 7676738024136431163, guid: e155d907d45bbec4bb9765c788befc68, type: 3}
       propertyPath: m_Name
       value: Dude
@@ -2037,9 +2041,9 @@ SceneRoots:
   - {fileID: 1248159193}
   - {fileID: 1316468827}
   - {fileID: 1072528455}
-  - {fileID: 467435824}
   - {fileID: 2021516180}
   - {fileID: 378036156}
-  - {fileID: 1372605060}
   - {fileID: 2027651465}
   - {fileID: 1522176977}
+  - {fileID: 1372605060}
+  - {fileID: 467435824}
