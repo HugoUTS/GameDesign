@@ -6,6 +6,6 @@ public class Button : MonoBehaviour
 {
     public void LoadScene() 
     {
-        SceneManager.LoadScene("HugoScene");
+        SceneManager.LoadScene("Tutorial");
     }
 }
