@@ -6,14 +6,16 @@ TagManager:
   tags:
   - Ground
   - Edge
+  - Enemy
+  - Tile
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Collectibles
   - Water
   - UI
-  - 
+  - Enemy
   - 
   - 
   - 

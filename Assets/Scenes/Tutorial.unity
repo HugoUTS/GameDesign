@@ -3021,7 +3021,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: You can pickup the torch but not just yet
+  m_text: You can shoot Firebalss by clicking the left mouse button .
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: b11bd8af07bca47d88617ee0e12742e8, type: 2}
   m_sharedMaterial: {fileID: -2790593545465540645, guid: b11bd8af07bca47d88617ee0e12742e8, type: 2}
@@ -3132,7 +3132,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 3048, y: -128}
+  m_AnchoredPosition: {x: 3048, y: -47}
   m_SizeDelta: {x: 1000, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1280889248
@@ -3155,7 +3155,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Beware of the Slime '
+  m_text: You can kill enemies by shooting the fireball.
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: b11bd8af07bca47d88617ee0e12742e8, type: 2}
   m_sharedMaterial: {fileID: -2790593545465540645, guid: b11bd8af07bca47d88617ee0e12742e8, type: 2}
@@ -3300,17 +3300,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1741947405 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 8700021090496966518, guid: cf3fa3a5398ae7849bae2efb3a251976, type: 3}
-  m_PrefabInstance: {fileID: 8761467441718814463}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9bc7dedfff726422ba78e2f38033a4fb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1769267527
 GameObject:
   m_ObjectHideFlags: 0
@@ -3344,7 +3333,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   healthSlider: {fileID: 861354366}
-  playerHealth: {fileID: 1741947405}
+  playerHealth: {fileID: 0}
 --- !u!114 &1769267529
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3881,6 +3870,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2468620157452739839, guid: cf3fa3a5398ae7849bae2efb3a251976, type: 3}
+      propertyPath: fireballPrefab
+      value: 
+      objectReference: {fileID: 732396689028962473, guid: 2a6061e3c0a5f4d0fafbd62d2eb8b29e, type: 3}
     - target: {fileID: 7394160994635885790, guid: cf3fa3a5398ae7849bae2efb3a251976, type: 3}
       propertyPath: m_Name
       value: Player
