@@ -6,6 +6,6 @@ public class YJButton : MonoBehaviour
 {
     public void LoadScene() 
     {
-        SceneManager.LoadScene("YangjieScene");
+        SceneManager.LoadScene("YanjieScene");
     }
 }
