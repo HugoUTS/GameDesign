@@ -1,3 +1,4 @@
+using UnityEngine.SceneManagement;
 using UnityEngine;
 
 public class PlayerController : MonoBehaviour
@@ -8,6 +9,7 @@ public class PlayerController : MonoBehaviour
     private Animator animator;
     private bool isGrounded;
     private bool isFacingRight = true; // Assume the character is facing right by default
+    public float fallBoundary = -25f; 
 
     void Start()
     {
@@ -44,6 +46,10 @@ public class PlayerController : MonoBehaviour
             rb.AddForce(new Vector2(0.0f, jumpForce), ForceMode2D.Impulse);
             animator.SetTrigger("Jump");
         }
+        if (transform.position.y <= fallBoundary)
+        {
+            Die();
+        }
     }
 
     void Flip()
@@ -69,5 +75,10 @@ public class PlayerController : MonoBehaviour
         {
             isGrounded = false;
         }
+    }
+    void Die()
+    {
+        Debug.Log("Player has died");  // Optional: Output a debug message
+        SceneManager.LoadScene("GameOverScene");  // Replace "GameOverScene" with your actual game over scene name
     }
 }

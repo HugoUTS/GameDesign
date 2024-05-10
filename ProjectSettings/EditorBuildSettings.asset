@@ -23,4 +23,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/YanjieScene.unity
     guid: 53fc526bf473d5d4e9261d59e6d0fff7
+  - enabled: 1
+    path: Assets/Scenes/GameOverScene.unity
+    guid: 2292db4884fe84f59b6f24ee0e075f17
   m_configObjects: {}
