@@ -38,7 +38,7 @@ public class Door : MonoBehaviour
                 nextScene = "YanjieScene";
                 break;
             case "YanjieScene":
-                nextScene = "HugoScene"; // Loop back to the first scene, or you can stop cycling scenes
+                nextScene = "WinScene";
                 break;
             default:
                 Debug.Log("Scene name not recognized.");
