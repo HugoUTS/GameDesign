@@ -1,5 +1,5 @@
-using UnityEngine.SceneManagement;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerController : MonoBehaviour
 {
@@ -9,7 +9,10 @@ public class PlayerController : MonoBehaviour
     private Animator animator;
     private bool isGrounded;
     private bool isFacingRight = true; // Assume the character is facing right by default
-    public float fallBoundary = -25f; 
+    public float fallBoundary = -30f;
+
+    public AudioSource walkAudioSource; // Assign this in the inspector
+    public AudioSource jumpAudioSource; // Assign this in the inspector
 
     void Start()
     {
@@ -25,6 +28,10 @@ public class PlayerController : MonoBehaviour
         if (moveHorizontal != 0)
         {
             animator.SetBool("isWalking", true);
+            if (!walkAudioSource.isPlaying)
+            {
+                walkAudioSource.Play();
+            }
 
             // Check if the character needs to flip
             if ((moveHorizontal > 0 && !isFacingRight) || (moveHorizontal < 0 && isFacingRight))
@@ -35,6 +42,7 @@ public class PlayerController : MonoBehaviour
         else
         {
             animator.SetBool("isWalking", false);
+            walkAudioSource.Stop();
         }
 
         // Update the character's position
@@ -45,7 +53,9 @@ public class PlayerController : MonoBehaviour
         {
             rb.AddForce(new Vector2(0.0f, jumpForce), ForceMode2D.Impulse);
             animator.SetTrigger("Jump");
+            jumpAudioSource.Play();
         }
+
         if (transform.position.y <= fallBoundary)
         {
             Die();
@@ -76,6 +86,7 @@ public class PlayerController : MonoBehaviour
             isGrounded = false;
         }
     }
+
     void Die()
     {
         Debug.Log("Player has died");  // Optional: Output a debug message
