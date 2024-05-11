@@ -9,10 +9,11 @@ public class PlayerController : MonoBehaviour
     private Animator animator;
     private bool isGrounded;
     private bool isFacingRight = true; // Assume the character is facing right by default
-    public float fallBoundary = -30f;
+    public float fallBoundary = -25f;
 
     public AudioSource walkAudioSource; // Assign this in the inspector
     public AudioSource jumpAudioSource; // Assign this in the inspector
+    public AudioSource landAudioSource; // Assign this in the inspector for landing sound
 
     void Start()
     {
@@ -25,24 +26,24 @@ public class PlayerController : MonoBehaviour
         float moveHorizontal = Input.GetAxis("Horizontal");
         
         // For animation, we need to check if there is horizontal movement
-        if (moveHorizontal != 0)
+        if (moveHorizontal != 0 && isGrounded)
         {
             animator.SetBool("isWalking", true);
             if (!walkAudioSource.isPlaying)
             {
                 walkAudioSource.Play();
             }
-
-            // Check if the character needs to flip
-            if ((moveHorizontal > 0 && !isFacingRight) || (moveHorizontal < 0 && isFacingRight))
-            {
-                Flip();
-            }
         }
         else
         {
             animator.SetBool("isWalking", false);
             walkAudioSource.Stop();
+        }
+
+        // Check if the character needs to flip
+        if ((moveHorizontal > 0 && !isFacingRight) || (moveHorizontal < 0 && isFacingRight))
+        {
+            Flip();
         }
 
         // Update the character's position
@@ -75,6 +76,10 @@ public class PlayerController : MonoBehaviour
     {
         if (collision.collider.CompareTag("Ground"))
         {
+            if (!isGrounded)
+            {
+                landAudioSource.Play(); // Play landing sound when hitting the ground
+            }
             isGrounded = true;
         }
     }
