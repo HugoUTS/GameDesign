@@ -5,6 +5,7 @@ public class PlayerHealth : MonoBehaviour
     public int maxHealth = 100; // Maximum health
     public int currentHealth;   // Current health
     public HealthBar healthBar; // Reference to the HealthBar script
+    public AudioSource damageAudioSource; // Assign an AudioSource for damage sound in the Inspector
 
     void Start()
     {
@@ -21,6 +22,12 @@ public class PlayerHealth : MonoBehaviour
     {
         // Reduce the player's health by the specified damage amount
         currentHealth -= damage;
+
+        // Play the damage sound
+        if (damageAudioSource != null)
+        {
+            damageAudioSource.Play();
+        }
 
         // Update the health bar
         if (healthBar != null)
@@ -43,5 +50,3 @@ public class PlayerHealth : MonoBehaviour
         // For example, reload the scene, display a game over screen, or disable the player
     }
 }
-
-
