@@ -20693,7 +20693,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8560212798742815819, guid: 98973662961bf2149a93daf768faeb04, type: 3}
       propertyPath: fallBoundary
-      value: -15
+      value: -30
       objectReference: {fileID: 0}
     - target: {fileID: 8700021090496966518, guid: 98973662961bf2149a93daf768faeb04, type: 3}
       propertyPath: healthBar
