@@ -8,19 +8,19 @@ public class Fireball : MonoBehaviour
     {
         if (other.CompareTag("Enemy")) // Check if fireball hits an object tagged as "Enemy"
         {
-            Destroy(other.gameObject);// Add damage to the enemy here if needed
-            Destroy(gameObject); // Destroy the fireball on collision with an enemy
+            // Assuming the enemy has an Enemy script attached
+            Enemy enemyScript = other.GetComponent<Enemy>();
+            if (enemyScript != null)
+            {
+                enemyScript.Die();
+            }
+
+            // Destroy the fireball on collision with an enemy
+            Destroy(gameObject);
         }
-        if (other.CompareTag("Ground"))  // Replace "Tile" with your tag
+        if (other.CompareTag("Ground")) // Check if fireball hits the ground
         {
-            Destroy(gameObject);  // Destroys the fireball on collision with a tile
-        }
-        void OnCollisionEnter2D(Collision2D collision)
-        {
-            Destroy(gameObject);  // Destroys the fireball on any collision
+            Destroy(gameObject); // Destroys the fireball on collision with a tile
         }
     }
-    
-    
-    
 }
