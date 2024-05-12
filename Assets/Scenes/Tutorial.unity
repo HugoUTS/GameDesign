@@ -2456,7 +2456,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 522, y: -19}
+  m_AnchoredPosition: {x: 320.59998, y: -17.5}
   m_SizeDelta: {x: 160, y: 35}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &866095377
@@ -3301,6 +3301,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 7488090383838733211, guid: 98973662961bf2149a93daf768faeb04, type: 3}
   m_PrefabInstance: {fileID: 1642799235}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1592299538 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8700021090496966518, guid: 98973662961bf2149a93daf768faeb04, type: 3}
+  m_PrefabInstance: {fileID: 1642799235}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9bc7dedfff726422ba78e2f38033a4fb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1642799235
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3353,6 +3364,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8700021090496966518, guid: 98973662961bf2149a93daf768faeb04, type: 3}
+      propertyPath: healthBar
+      value: 
+      objectReference: {fileID: 1769267528}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3391,7 +3406,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   healthSlider: {fileID: 861354366}
-  playerHealth: {fileID: 0}
+  playerHealth: {fileID: 1592299538}
 --- !u!114 &1769267529
 MonoBehaviour:
   m_ObjectHideFlags: 0
