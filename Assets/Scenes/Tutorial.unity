@@ -3378,6 +3378,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 7266769052600798009, guid: 98973662961bf2149a93daf768faeb04, type: 3}
+      propertyPath: hasKey
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7394160994635885790, guid: 98973662961bf2149a93daf768faeb04, type: 3}
       propertyPath: m_Name
       value: Dude

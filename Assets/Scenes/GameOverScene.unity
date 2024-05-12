@@ -333,8 +333,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 223081589}
-        m_TargetAssemblyTypeName: HugoButton, Assembly-CSharp
-        m_MethodName: LoadScene
+        m_TargetAssemblyTypeName: LoadPreviousScene, Assembly-CSharp
+        m_MethodName: LoadPrevious
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -391,7 +391,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 223081584}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fd08b5296f7218b43b3ccfecc3a37bc8, type: 3}
+  m_Script: {fileID: 11500000, guid: 4ddf8c1e6fd487a4cba052358973a7af, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &488126280
