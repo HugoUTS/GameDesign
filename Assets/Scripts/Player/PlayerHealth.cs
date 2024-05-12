@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerHealth : MonoBehaviour
 {
@@ -47,6 +48,6 @@ public class PlayerHealth : MonoBehaviour
     {
         Debug.Log("Player died!"); // Simple log message for debugging
         // Additional logic for game over or player death
-        // For example, reload the scene, display a game over screen, or disable the player
+        SceneManager.LoadScene("GameOverScene");// For example, reload the scene, display a game over screen, or disable the player
     }
 }
