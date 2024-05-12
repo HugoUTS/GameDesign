@@ -37,7 +37,12 @@ public class PlayerShooting : MonoBehaviour
             if (rbFireball != null)
             {
                 rbFireball.velocity = direction * fireballSpeed; // Use the normalized direction multiplied by the desired speed
+
+                // Calculate the angle to rotate the fireball
+                float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
+                fireball.transform.rotation = Quaternion.Euler(0, 0, angle);
             }
         }
     }
 }
+
