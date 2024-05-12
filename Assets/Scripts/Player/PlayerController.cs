@@ -3,13 +3,13 @@ using UnityEngine.SceneManagement;
 
 public class PlayerController : MonoBehaviour
 {
-    public float speed = 3.0f;
-    public float jumpForce = 2.0f;
+    public float speed = 5.0f;
+    public float jumpForce = 7.0f;
     private Rigidbody2D rb;
     private Animator animator;
     private bool isGrounded;
     private bool isFacingRight = true; // Assume the character is facing right by default
-    public float fallBoundary = -25f;
+    public float fallBoundary = -30f;
 
     public AudioSource walkAudioSource; // Assign this in the inspector
     public AudioSource jumpAudioSource; // Assign this in the inspector

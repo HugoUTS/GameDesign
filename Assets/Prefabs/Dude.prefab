@@ -157,7 +157,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 5
-  jumpForce: 8
+  jumpForce: 7
   fallBoundary: -30
   walkAudioSource: {fileID: 6027064255750524267}
   jumpAudioSource: {fileID: 6766299052393018546}
