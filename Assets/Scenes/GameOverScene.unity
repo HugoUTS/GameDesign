@@ -404,7 +404,6 @@ GameObject:
   m_Component:
   - component: {fileID: 488126283}
   - component: {fileID: 488126282}
-  - component: {fileID: 488126281}
   m_Layer: 0
   m_Name: Music
   m_TagString: Untagged
@@ -412,18 +411,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &488126281
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 488126280}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7a60e38a3b84b004ca7bcd614479ec42, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!82 &488126282
 AudioSource:
   m_ObjectHideFlags: 0
@@ -594,8 +581,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Exit
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: b11bd8af07bca47d88617ee0e12742e8, type: 2}
+  m_sharedMaterial: {fileID: -2790593545465540645, guid: b11bd8af07bca47d88617ee0e12742e8, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1000,7 +987,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 825123887}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3af48913c0c21534ab50fb42622d2f09, type: 3}
+  m_Script: {fileID: 11500000, guid: dcd1cd27538633f4ba982c953291e43b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &857245660
@@ -1943,8 +1930,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Try Again
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: b11bd8af07bca47d88617ee0e12742e8, type: 2}
+  m_sharedMaterial: {fileID: -2790593545465540645, guid: b11bd8af07bca47d88617ee0e12742e8, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
