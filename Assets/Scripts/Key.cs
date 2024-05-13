@@ -18,10 +18,18 @@ public class Key : MonoBehaviour
                 if (pickupAudioSource != null)
                 {
                     pickupAudioSource.Play();
+                    // Disable the collider to prevent further triggering
+                    GetComponent<Collider2D>().enabled = false;
+                    // Hide the key visually
+                    GetComponent<SpriteRenderer>().enabled = false;
+                    // Delay the destruction until the sound has finished
+                    Destroy(gameObject, pickupAudioSource.clip.length);
                 }
-
-                // Hide or disable the key upon pickup
-                gameObject.SetActive(false); 
+                else
+                {
+                    // Immediately hide or disable the key if no audio source is found
+                    gameObject.SetActive(false);
+                }
             }
         }
     }
