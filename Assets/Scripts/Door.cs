@@ -3,6 +3,8 @@ using UnityEngine.SceneManagement; // Required to load scenes
 
 public class Door : MonoBehaviour
 {
+    public AudioSource doorAudioSource; // Assign an AudioSource for door sound in the Inspector
+
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.CompareTag("Player")) // Ensure it's the player
@@ -11,12 +13,21 @@ public class Door : MonoBehaviour
 
             if (playerInventory != null && playerInventory.hasKey) // Check if the player has the key
             {
+                PlayDoorSound();
                 LoadNextScene();
             }
             else
             {
                 Debug.Log("Player does not have the key!"); // Optional: Provide feedback if the player lacks the key
             }
+        }
+    }
+
+    void PlayDoorSound()
+    {
+        if (doorAudioSource != null)
+        {
+            doorAudioSource.Play();
         }
     }
 
@@ -45,6 +56,13 @@ public class Door : MonoBehaviour
                 return; // Exit the method if the scene name doesn't match
         }
 
-        SceneManager.LoadScene(nextScene); // Load the determined next scene
+        // Add a delay to ensure the sound effect plays completely before scene transition
+        StartCoroutine(WaitAndLoadScene(nextScene, doorAudioSource.clip.length));
+    }
+
+    System.Collections.IEnumerator WaitAndLoadScene(string sceneName, float delay)
+    {
+        yield return new WaitForSeconds(delay);
+        SceneManager.LoadScene(sceneName);
     }
 }
